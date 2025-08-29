@@ -1,7 +1,7 @@
 {
-  "name": "thuchiapp",
+  "name": "thuchi_app",
   "version": "1.0.0",
-  "description": "thu chi app testing",
+  "description": "thu chi app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thltt/TCAPP2.git"
+    "url": "git+https://github.com/thltt/TCAPP.git"
   },
   "author": "THLT",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thltt/TCAPP2/issues"
+    "url": "https://github.com/thltt/TCAPP/issues"
   },
-  "homepage": "https://github.com/thltt/TCAPP2#readme",
+  "homepage": "https://github.com/thltt/TCAPP#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
