@@ -14,7 +14,6 @@ const {
   getAllTrips,
   addTrip,
   deleteTrip,
-  updateTrip,
   // Công nợ
   getAllDebts,
   addDebt,
@@ -25,6 +24,9 @@ const {
 } = require("../controllers/homeController");
 
 // API giữ awake
+router.get("/", (req, res) => {
+  res.send("hello");
+});
 router.get("/health", getAwake);
 
 // ==== Thu Chi =====
