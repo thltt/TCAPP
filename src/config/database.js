@@ -7,6 +7,9 @@ const pool = mysql.createPool({
   user: process.env.MYSQL_ADDON_USER,
   password: process.env.MYSQL_ADDON_PASSWORD,
   database: process.env.MYSQL_ADDON_DB,
+  ssl: {
+    rejectUnauthorized: true,
+  },
   waitForConnections: true,
   connectionLimit: 5,
   queueLimit: 0,
@@ -15,6 +18,7 @@ const pool = mysql.createPool({
   idleTimeout: 60000,
   enableKeepAlive: true,
   keepAliveInitialDelay: 0,
+  connectTimeout: 20000,
 });
 
 // Khi pool tạo connection mới -> set timeout ngắn

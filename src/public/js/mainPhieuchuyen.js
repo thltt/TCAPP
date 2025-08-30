@@ -1,4 +1,4 @@
-const API_TRIPS = "https://tcapp2.onrender.com/api/trips";
+const API_TRIPS = "https://tcapp-pearl.vercel.app/api/trips";
 
 // Load danh sách phiếu chuyến khi mở trang
 window.onload = () => {

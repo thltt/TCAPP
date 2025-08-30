@@ -1,5 +1,5 @@
-const API_SUM_DEBTS = "https://tcapp2.onrender.com/api/debts/summary";
-const API_SUM_TRIPS = "https://tcapp2.onrender.com/api/trips/summary";
+const API_SUM_DEBTS = "https://tcapp-pearl.vercel.app/api/debts/summary";
+const API_SUM_TRIPS = "https://tcapp-pearl.vercel.app/api/trips/summary";
 
 let tripsSummary = null;
 let debtsSummary = null;

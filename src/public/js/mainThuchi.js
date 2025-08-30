@@ -9,12 +9,12 @@ function formatCurrency(number) {
 async function loadData() {
   try {
     // Lấy tồn đầu
-    const resBalance = await fetch("https://tcapp2.onrender.com/api/starting-balance");
+    const resBalance = await fetch("https://tcapp-pearl.vercel.app/api/starting-balance");
     const dataBalance = await resBalance.json();
     const startingBalance = parseFloat(dataBalance.starting_balance) || 0;
 
     // Lấy danh sách giao dịch
-    const resTransactions = await fetch("https://tcapp2.onrender.com/api/transactions");
+    const resTransactions = await fetch("https://tcapp-pearl.vercel.app/api/transactions");
     transactions = await resTransactions.json();
     if (!Array.isArray(transactions)) transactions = [];
 
@@ -39,7 +39,7 @@ async function inputStartingBalance() {
   }
 
   try {
-    const response = await fetch("https://tcapp2.onrender.com/api/starting-balance", {
+    const response = await fetch("https://tcapp-pearl.vercel.app/api/starting-balance", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ starting_balance: inputValue }),
@@ -58,7 +58,7 @@ async function inputStartingBalance() {
 // Xóa giá trị tồn đầu
 async function deleteStartingBalance() {
   try {
-    const response = await fetch("https://tcapp2.onrender.com/api/starting-balance", {
+    const response = await fetch("https://tcapp-pearl.vercel.app/api/starting-balance", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ starting_balance: 0 }),
@@ -68,7 +68,7 @@ async function deleteStartingBalance() {
     await loadData();
   } catch (err) {
     console.error(err);
-    alert("Không thể xóa tồn đầu trên server.");
+    alert("Lỗi khi xóa tồn đầu");
   }
 }
 
@@ -142,7 +142,7 @@ async function addRow() {
   };
 
   try {
-    const response = await fetch("https://tcapp2.onrender.com/api/transactions", {
+    const response = await fetch("https://tcapp-pearl.vercel.app/api/transactions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -159,10 +159,8 @@ async function addRow() {
 
 // Xóa giao dịch
 async function deleteTransaction(id) {
-  if (!confirm("Bạn có chắc chắn muốn xóa dòng này?")) return;
-
   try {
-    const response = await fetch(`https://tcapp2.onrender.com/api/transactions/${id}`, {
+    const response = await fetch(`https://tcapp-pearl.vercel.app/api/transactions/${id}`, {
       method: "DELETE",
     });
     await loadData();

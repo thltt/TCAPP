@@ -36,6 +36,7 @@ const getStartingBalance = async (req, res) => {
 
 // Controller cập nhật hoặc xóa tồn đầu Thu Chi
 const postStartingBalance = async (req, res) => {
+  console.log("Body nhận được:", req.body);
   const { starting_balance } = req.body;
   const result = await updateStartingBalance(starting_balance);
   res.json({ message: "Chỉnh sửa tồn đầu thành công.", result });

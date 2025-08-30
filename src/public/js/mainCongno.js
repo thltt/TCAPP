@@ -1,4 +1,4 @@
-const API_DEBTS = "https://tcapp2.onrender.com/api/debts";
+const API_DEBTS = "https://tcapp-pearl.vercel.app/api/debts";
 
 window.onload = fetchDebts();
 window.onload = () => {
